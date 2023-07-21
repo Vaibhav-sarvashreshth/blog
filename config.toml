@@ -1,6 +1,6 @@
 baseURL = 'https://Vaibhav-sarvashreshth.github.io/blog/'
 languageCode = 'en-us'
-title = 'Vaibhav's Blogs'
+title = "Vaibhav's Blogs"
 theme = "m10c"
 
 [params]
