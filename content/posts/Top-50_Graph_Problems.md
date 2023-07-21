@@ -2,6 +2,7 @@
 title: Top 50 Graph Questions
 date: 2023-07-20T15:10:44+05:30
 draft: false
+tags: [top-50-graph-question, Imp-graph_questions, DFS, BFS]
 ---
 
 # Top 50 Graph Problems

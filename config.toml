@@ -1,6 +1,6 @@
 baseURL = 'https://Vaibhav-sarvashreshth.github.io/blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Vaibhav's Blogs'
 theme = "m10c"
 
 [params]
@@ -10,12 +10,9 @@ theme = "m10c"
   [[params.social]]
     icon = "github"
     name = "GitHub"
-    url = "https://github.com/ChristopherJHart"
+    url = "https://github.com/Vaibhav-sarvashreshth"
 
-  [[params.social]]
-    icon = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/_ChrisJHart"
+  
 
 [[menu.main]]
   identifier = "tags"
