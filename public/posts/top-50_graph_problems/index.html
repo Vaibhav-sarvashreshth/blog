@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Top 50 Graph Questions // Vaibhav&#39;s Blogs</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Christopher Hart" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/blog/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Top 50 Graph Questions"/>
+<meta name="twitter:description" content="Top 50 Graph Problems Looking to master graph theory and solve graph problems efficiently? You&rsquo;re in the right place! This blog provides solutions to the top 50 graph problems along with multiple approaches for each problem. We also ensure that the written code is well-commented for better understanding.
+Graphs are essential data structures used in various fields, including computer science, data analysis, and network analysis. By gaining proficiency in graph theory and problem-solving, you can enhance your skills and tackle complex challenges effectively."/>
+
+    <meta property="og:title" content="Top 50 Graph Questions" />
+<meta property="og:description" content="Top 50 Graph Problems Looking to master graph theory and solve graph problems efficiently? You&rsquo;re in the right place! This blog provides solutions to the top 50 graph problems along with multiple approaches for each problem. We also ensure that the written code is well-commented for better understanding.
+Graphs are essential data structures used in various fields, including computer science, data analysis, and network analysis. By gaining proficiency in graph theory and problem-solving, you can enhance your skills and tackle complex challenges effectively." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Vaibhav-sarvashreshth.github.io/blog/posts/top-50_graph_problems/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-20T15:10:44+05:30" />
+<meta property="article:modified_time" content="2023-07-20T15:10:44+05:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Vaibhav-sarvashreshth.github.io/blog/"><img class="app-header-avatar" src="/blog/avatar.jpg" alt="Christopher Hart" /></a>
+      <span class="app-header-title">Vaibhav&#39;s Blogs</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+      </nav>
+      <p>A blog about all things technical.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/Vaibhav-sarvashreshth" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>GitHub</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://github.com/Vaibhav-sarvashreshth" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Top 50 Graph Questions</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 20, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          13 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="top-50-graph-problems">Top 50 Graph Problems</h1>
+<p>Looking to master graph theory and solve graph problems efficiently? You&rsquo;re in the right place! This blog provides solutions to the top 50 graph problems along with multiple approaches for each problem. We also ensure that the written code is well-commented for better understanding.</p>
+<p>Graphs are essential data structures used in various fields, including computer science, data analysis, and network analysis. By gaining proficiency in graph theory and problem-solving, you can enhance your skills and tackle complex challenges effectively.</p>
+<h1 id="graph-problem-heading">Graph Problem Heading</h1>
+<h2 id="print-adjacency-list"><strong>Print adjacency list</strong></h2>
+<p>Given the adjacency list of a bidirectional graph. Your task is to copy/clone the adjacency list for each vertex and return a new list.</p>
+<h2 id="solution">Solution</h2>
+<p>Discuss the first solution to the graph problem. Explain the approach, algorithm, or technique used in this solution. Provide step-by-step explanations, highlighting any key insights or observations.</p>
+<h3 id="code-c">Code (C++)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> printGraph(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> graph(V);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(k<span style="color:#f92672">&lt;</span>V)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            graph[k].push_back(k);
+</span></span><span style="display:flex;"><span>            k<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>V;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> x : adj[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                graph[i].push_back(x);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> graph;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="bfs-of-graph"><strong>BFS of graph</strong></h2>
+<p>Given a directed graph. The task is to do Breadth First Traversal of this graph starting from 0.</p>
+<p><code>Note</code>: One can move from node u to node v only if there&rsquo;s an edge from u to v and find the BFS traversal of the graph starting from the 0th vertex, from left to right according to the graph. Also, you should only take nodes directly or indirectly connected from Node 0 in consideration.</p>
+<h3 id="solution-1">Solution</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> bfsOfGraph(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Vector to store the nodes visited in BFS order
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> nodes;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Array to keep track of visited nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> visited[V] <span style="color:#f92672">=</span> {false};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Create a queue for BFS traversal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> q;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Start BFS from vertex 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        q.push(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        visited[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Perform BFS traversal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> front <span style="color:#f92672">=</span> q.front();
+</span></span><span style="display:flex;"><span>            nodes.push_back(front);
+</span></span><span style="display:flex;"><span>            q.pop();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Traverse all adjacent nodes of the current node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> node : adj[front])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// If the adjacent node is not visited, mark it as visited,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// add it to the visited nodes vector, and enqueue it for further traversal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited[node])
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    visited[node] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>                    q.push(node);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return the vector containing the nodes visited in BFS order
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> nodes;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="dfs-of-graph"><strong>DFS of Graph</strong></h2>
+<p>You are given a connected undirected graph. Perform a Depth First Traversal of the graph.
+Note: Use a recursive approach to find the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph.</p>
+<h3 id="solution-2">Solution</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Depth First Traversal (DFS) of a Graph
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * This code implements a recursive approach to perform a Depth First Traversal (DFS) of a connected undirected graph.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * The DFS traversal starts from the 0th vertex and explores all reachable vertices from each visited vertex.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * The traversal order is from left to right according to the graph.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[],<span style="color:#66d9ef">int</span> i,vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;&amp;</span>visited,vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span>ans)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>            visited[i]<span style="color:#f92672">=</span>true;
+</span></span><span style="display:flex;"><span>            ans.push_back(i);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> vertex : adj[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[vertex])
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    dfs(adj,vertex,visited,ans);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> dfsOfGraph(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> ans;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> visited(V,false);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>V;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                dfs(adj,i,visited,ans);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="find-the-number-of-islands"><strong>Find the number of islands</strong></h2>
+<p>Given a grid of size n*m (n is the number of rows and m is the number of columns in the grid) consisting of &lsquo;0&rsquo;s (Water) and &lsquo;1&rsquo;s(Land). Find the number of islands.</p>
+<p>Note: An island is either surrounded by water or boundary of grid and is formed by connecting adjacent lands horizontally or vertically or diagonally i.e., in all 8 directions.</p>
+<h3 id="solution-using-bfs"><strong>Solution (using BFS)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;queue&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Breadth-First Search (BFS) function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bfs</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> adj, <span style="color:#66d9ef">int</span> V, <span style="color:#66d9ef">int</span> N, <span style="color:#66d9ef">bool</span><span style="color:#f92672">*</span> visited) {
+</span></span><span style="display:flex;"><span>queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> q;
+</span></span><span style="display:flex;"><span>visited[N] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>q.push(N);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>q.empty()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> q.front();
+</span></span><span style="display:flex;"><span>    q.pop();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited[i] <span style="color:#f92672">&amp;&amp;</span> adj[top][i]) {
+</span></span><span style="display:flex;"><span>            q.push(i);
+</span></span><span style="display:flex;"><span>            visited[i] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to find the number of provinces in the graph
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numProvinces</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> adj, <span style="color:#66d9ef">int</span> V) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> visited[V] <span style="color:#f92672">=</span> { false };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> no_of_provinces <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited[i]) {
+</span></span><span style="display:flex;"><span>        bfs(adj, V, i, visited);
+</span></span><span style="display:flex;"><span>        no_of_provinces<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> no_of_provinces;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="solution-using-dfs"><strong>Solution (using DFS)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> index, vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> adj, <span style="color:#66d9ef">int</span> visited[], <span style="color:#66d9ef">int</span> V)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        visited[index] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(adj[index][i] and visited[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                visited[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>                dfs(i, adj, visited, V);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numProvinces</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> adj, <span style="color:#66d9ef">int</span> V) {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> visited[V] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> comp <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                comp<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                dfs(i, adj, visited, V);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> comp;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="find-the-number-of-islands-1"><strong>Find the number of islands</strong></h2>
+<p>Given a grid of size n*m (n is the number of rows and m is the number of columns in the grid) consisting of &lsquo;0&rsquo;s (Water) and &lsquo;1&rsquo;s(Land). Find the number of islands.</p>
+<p>Note: An island is either surrounded by water or boundary of grid and is formed by connecting adjacent lands horizontally or vertically or diagonally i.e., in all 8 directions.</p>
+<h3 id="solution-3"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> vis[<span style="color:#ae81ff">501</span>][<span style="color:#ae81ff">501</span>]<span style="color:#f92672">=</span>{{<span style="color:#ae81ff">0</span>}};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n,m;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> dx[<span style="color:#ae81ff">8</span>] <span style="color:#f92672">=</span> { <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> dy[<span style="color:#ae81ff">8</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>};
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">val</span>(<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> c)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(r<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> r<span style="color:#f92672">&gt;=</span>n <span style="color:#f92672">||</span> c<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> c<span style="color:#f92672">&gt;=</span>m)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> c)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        vis[r][c]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">8</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> nr<span style="color:#f92672">=</span>r<span style="color:#f92672">+</span>dx[i];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> nc<span style="color:#f92672">=</span>c<span style="color:#f92672">+</span>dy[i];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(val(nr,nc) <span style="color:#f92672">&amp;&amp;</span> vis[nr][nc]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                dfs(nr,nc);
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numIslands</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;&gt;&amp;</span> grid)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        n<span style="color:#f92672">=</span>grid.size();
+</span></span><span style="display:flex;"><span>        m<span style="color:#f92672">=</span>grid[<span style="color:#ae81ff">0</span>].size();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> no_of_island<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span>m;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(grid[i][j]<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vis[i][j]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span>m;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>vis[i][j])
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    dfs(i,j);
+</span></span><span style="display:flex;"><span>                    no_of_island<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                }   
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> no_of_island;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="detect-cycle-in-an-undirected-graph"><strong>Detect cycle in an undirected graph</strong></h2>
+<p>Given an undirected graph with V vertices and E edges, check whether it contains any cycle or not. Graph is in the form of adjacency list where adj[i] contains all the nodes ith node is having edge with.</p>
+<h3 id="solution-4"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Depth-First Search (DFS) function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[], vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;&amp;</span> visited, <span style="color:#66d9ef">int</span> source, <span style="color:#66d9ef">int</span> parent) {
+</span></span><span style="display:flex;"><span>visited[source] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> node : adj[source]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (visited[node] <span style="color:#f92672">==</span> false) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (dfs(adj, visited, node, source)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (node <span style="color:#f92672">!=</span> parent) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to check whether the graph contains any cycle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isCycle</span>(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[]) {
+</span></span><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> visited(V, false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (visited[i] <span style="color:#f92672">==</span> false) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (dfs(adj, visited, i, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="hamiltonian-path"><strong>Hamiltonian Path</strong></h2>
+<p>A Hamiltonian path, is a path in an undirected graph that visits each vertex exactly once. Given an undirected graph, the task is to check if a Hamiltonian path is present in it or not.</p>
+<h3 id="solution-5"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> n, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[], vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>vist, <span style="color:#66d9ef">int</span> src){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(n<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        vist[src]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>x:adj[src]){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(vist[x]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(dfs(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,adj,vist,x)){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        vist[src]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">check</span>(<span style="color:#66d9ef">int</span> N,<span style="color:#66d9ef">int</span> M,vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> Edges)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span> N, m<span style="color:#f92672">=</span> M;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[n];
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>x:Edges){
+</span></span><span style="display:flex;"><span>            adj[x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].push_back(x[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>            adj[x[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].push_back(x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> vist(n,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(dfs(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,adj,vist,i)){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="prerequisite-tasks"><strong>Prerequisite Tasks</strong></h2>
+<p>There are a total of N tasks, labeled from 0 to N-1. Some tasks may have prerequisites, for example to do task 0 you have to first complete task 1, which is expressed as a pair: [0, 1]
+Given the total number of tasks N and a list of prerequisite pairs P, find if it is possible to finish all tasks.</p>
+<h3 id="solution-6"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isPossible</span>(<span style="color:#66d9ef">int</span> N, vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;&amp;</span> prerequisites) {
+</span></span><span style="display:flex;"><span>	    <span style="color:#75715e">// Code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> N;
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> graph(n);
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> indegree(n,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> c : prerequisites)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            graph[c.second].push_back(c.first);
+</span></span><span style="display:flex;"><span>            indegree[c.first]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> toposort;
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> q;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(indegree[i]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>) 
+</span></span><span style="display:flex;"><span>                q.push(i);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> curr <span style="color:#f92672">=</span> q.front();
+</span></span><span style="display:flex;"><span>            q.pop();
+</span></span><span style="display:flex;"><span>            toposort.push_back(curr);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> nbr: graph[curr])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                indegree[nbr]<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(indegree[nbr]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>) 
+</span></span><span style="display:flex;"><span>                    q.push(nbr);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(toposort.size()<span style="color:#f92672">!=</span>n) 
+</span></span><span style="display:flex;"><span>        	<span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>        	
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h2 id="course-schedule"><strong>Course Schedule</strong></h2>
+<p>There are a total of n tasks you have to pick, labeled from 0 to n-1. Some tasks may have prerequisites tasks, for example to pick task 0 you have to first finish tasks 1, which is expressed as a pair: [0, 1]
+Given the total number of n tasks and a list of prerequisite pairs of size m. Find a ordering of tasks you should pick to finish all tasks.
+Note: There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all tasks, return an empty array. Returning any correct order will give the output as 1, whereas any invalid order will give the output &ldquo;No Ordering Possible&rdquo;.</p>
+<h3 id="solution-using-kosarajus-algorithm"><strong>Solution (Using Kosarajus Algorithm)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> i ,vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">&amp;</span>adj,vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>visited , vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>recursive_stack ,stack<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span>answer)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>         recursive_stack[i]<span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>         visited[i]<span style="color:#f92672">=</span>true;
+</span></span><span style="display:flex;"><span>         
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> node: adj[i])
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[node])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(dfs(node,adj,visited,recursive_stack,answer))
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(recursive_stack[node]<span style="color:#f92672">==</span>true)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        answer.push(i);
+</span></span><span style="display:flex;"><span>        recursive_stack[i]<span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> findOrder(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> m, vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> prerequisites) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>ordering;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>visited(n,<span style="color:#ae81ff">0</span>),recursive_stack(n,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> adj(n);
+</span></span><span style="display:flex;"><span>	    stack<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>answer;
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#75715e">// converting the list into adj matrix
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> prerequisite : prerequisites) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> course <span style="color:#f92672">=</span> prerequisite[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> prerequisiteCourse <span style="color:#f92672">=</span> prerequisite[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>            adj[prerequisiteCourse].push_back(course);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#75715e">// now traversing through adj using dfs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	    {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[i])
+</span></span><span style="display:flex;"><span>	        {
+</span></span><span style="display:flex;"><span>	            <span style="color:#66d9ef">if</span>(dfs(i,adj,visited,recursive_stack,answer))
+</span></span><span style="display:flex;"><span>	            {
+</span></span><span style="display:flex;"><span>	                
+</span></span><span style="display:flex;"><span>	                <span style="color:#66d9ef">return</span> {};
+</span></span><span style="display:flex;"><span>	            }
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>answer.empty()) {
+</span></span><span style="display:flex;"><span>            ordering.push_back(answer.top());
+</span></span><span style="display:flex;"><span>            answer.pop();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ordering;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="solution-using-kahns-algorithm-for-topological-sorting"><strong>Solution (Using Kahn’s algorithm for Topological Sorting)</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> findOrder(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> m, vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> prerequisites) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/* Here I used Kahns algorithm, first will find the inorder of all nodes, if we found
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        inorder=0 for a node, then we will push it in a queue, to traverse the graph like we did in BFS.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        Then through that node we will travserv the other nodes, decrementing their indegrees.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        */</span>
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>graph(n);
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>indegree(n,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>q;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>toposort;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>m;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            graph[prerequisites[i][<span style="color:#ae81ff">1</span>]].push_back(prerequisites[i][<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>            indegree[prerequisites[i][<span style="color:#ae81ff">0</span>]]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(indegree[i]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                q.push(i);
+</span></span><span style="display:flex;"><span>                toposort.push_back(i);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> front <span style="color:#f92672">=</span> q.front();
+</span></span><span style="display:flex;"><span>            q.pop();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> node : graph[front])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                indegree[node]<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(indegree[node]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    q.push(node);
+</span></span><span style="display:flex;"><span>                    toposort.push_back(node);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(toposort.size() <span style="color:#f92672">!=</span> n)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> toposort;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="circle-of-strings"><strong>Circle of strings</strong></h2>
+<p>Given an array of lowercase strings A[] of size N, determine if the strings can be chained together to form a circle.
+A string X can be chained together with another string Y if the last character of X is same as first
+character of Y. If every string of the array can be chained, it will form a circle.</p>
+<p>For example, for the array arr[] = {&ldquo;for&rdquo;, &ldquo;geek&rdquo;, &ldquo;rig&rdquo;, &ldquo;kaf&rdquo;} the answer will be Yes as the given strings can be chained as &ldquo;for&rdquo;, &ldquo;rig&rdquo;, &ldquo;geek&rdquo; and &ldquo;kaf&rdquo;</p>
+<h3 id="solution-7"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> node, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[], vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>vis)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        vis[node]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> child: adj[node])
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(vis[child]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                dfs(child,adj,vis);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">isCircle</span>(<span style="color:#66d9ef">int</span> N, vector<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> A)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span> N;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[<span style="color:#ae81ff">26</span>];
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> in(<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">0</span>), out(<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> ch1<span style="color:#f92672">=</span>A[i][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span><span style="color:#e6db74">&#39;a&#39;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> ch2<span style="color:#f92672">=</span>A[i].back()<span style="color:#f92672">-</span><span style="color:#e6db74">&#39;a&#39;</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            adj[ch1].push_back(ch2); <span style="color:#75715e">//linking all componenets to form a eulerian cycle and test later
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// so here we are linking the first character and the last character of a string together
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            in[ch2]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            out[ch1]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> vis(<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">0</span>); 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> src<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">26</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(in[i]<span style="color:#f92672">!=</span>out[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">26</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(out[i]<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                src<span style="color:#f92672">=</span>i;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        dfs(src,adj,vis);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">26</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(vis[i]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> out[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="bipartite-graph"><strong>Bipartite Graph</strong></h2>
+<p>Given an adjacency list of a graph adj  of V no. of vertices having 0 based index. Check whether the graph is bipartite or not.</p>
+<h3 id="solution-8"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isBipartite</span>(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>adj[])
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*This code works on a simple principle that, while traversing the graph, you first color the first node and then you color all its neighbour with alternate color, and you keep on repeating the process. While doing so, if you found any node which is already colored and has the same color as the parent node, then its not the bi-partite graph. Else it is. */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// this code works for disconnected as well as connected graph
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// consider red as 0 and blue as 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>color(V,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>	    queue<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>q; <span style="color:#75715e">// first -&gt; node, second -&gt; color
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>V;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	    {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">if</span>(color[i]<span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>	        {
+</span></span><span style="display:flex;"><span>	            color[i]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	            q.push({i,<span style="color:#ae81ff">0</span>});
+</span></span><span style="display:flex;"><span>	            <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>    	        {
+</span></span><span style="display:flex;"><span>    	            
+</span></span><span style="display:flex;"><span>    	            pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> front <span style="color:#f92672">=</span> q.front();
+</span></span><span style="display:flex;"><span>        	        q.pop();
+</span></span><span style="display:flex;"><span>        	        <span style="color:#66d9ef">int</span> node <span style="color:#f92672">=</span> front.first;
+</span></span><span style="display:flex;"><span>        	        <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> front.second;
+</span></span><span style="display:flex;"><span>        	        
+</span></span><span style="display:flex;"><span>        	        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> neighbour : adj[node])
+</span></span><span style="display:flex;"><span>        	        {
+</span></span><span style="display:flex;"><span>        	            <span style="color:#66d9ef">if</span>(color[neighbour] <span style="color:#f92672">==</span> col)
+</span></span><span style="display:flex;"><span>        	            {
+</span></span><span style="display:flex;"><span>        	                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        	            }
+</span></span><span style="display:flex;"><span>        	            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(color[neighbour]<span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        	            {
+</span></span><span style="display:flex;"><span>        	                color[neighbour] <span style="color:#f92672">=</span> (col)<span style="color:#f92672">?</span>(<span style="color:#ae81ff">0</span>)<span style="color:#f92672">:</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        	                q.push({neighbour,color[neighbour]});
+</span></span><span style="display:flex;"><span>        	            }
+</span></span><span style="display:flex;"><span>        	        }
+</span></span><span style="display:flex;"><span>    	            
+</span></span><span style="display:flex;"><span>    	        }
+</span></span><span style="display:flex;"><span>	            
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	        
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h2 id="detect-cycle-in-a-directed-graph"><strong>Detect cycle in a directed graph</strong></h2>
+<p>Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check whether it contains any cycle or not.</p>
+<h3 id="solution-9"><strong>Solution</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> i ,vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[],vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>visited , vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>recursive_stack )
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>         recursive_stack[i]<span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>         visited[i]<span style="color:#f92672">=</span>true;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> node: adj[i])
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[node])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(dfs(node,adj,visited,recursive_stack))
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(recursive_stack[node]<span style="color:#f92672">==</span>true) <span style="color:#75715e">// that means if it is visited and also present in a recursive stack , which means cycle is present 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        recursive_stack[i]<span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isCyclic</span>(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>visited(V,<span style="color:#ae81ff">0</span>),recursive_stack(V,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>V;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> node : adj[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>visited[i])
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// note that dfs function here returns true if cycle is present and returns false when cycle is not present
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span>(dfs(i,adj,visited,recursive_stack))
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="find-whether-path-exist"><strong>Find whether path exist</strong></h2>
+<p>Given a grid of size n*n filled with 0, 1, 2, 3. Check whether there is a path possible from the source to destination. You can traverse up, down, right and left.
+The description of cells is as follows:</p>
+<p>A value of cell 1 means Source. <br>
+A value of cell 2 means Destination.<br>
+A value of cell 3 means Blank cell.<br>
+A value of cell 0 means Wall.</p>
+<p>Note: There are only a single source and a single destination.</p>
+<h3 id="solution-using-bfs-1"><strong>Solution Using BFS</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> dx[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> { <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> dy[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">val</span>(<span style="color:#66d9ef">int</span> x,<span style="color:#66d9ef">int</span> y,<span style="color:#66d9ef">int</span> n)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(x<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> y<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> x<span style="color:#f92672">&gt;=</span>n <span style="color:#f92672">||</span> y<span style="color:#f92672">&gt;=</span>n)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">is_Possible</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> grid) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span>grid.size();
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>q;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span>n;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(grid[i][j]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    q.push({i,j});
+</span></span><span style="display:flex;"><span>                    grid[i][j]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> x<span style="color:#f92672">=</span>q.front().first;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> y<span style="color:#f92672">=</span>q.front().second;
+</span></span><span style="display:flex;"><span>            q.pop();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">4</span>;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> nx<span style="color:#f92672">=</span>x<span style="color:#f92672">+</span>dx[i];
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> ny<span style="color:#f92672">=</span>y<span style="color:#f92672">+</span>dy[i];
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(val(nx,ny,n)<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> grid[nx][ny]<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(grid[nx][ny]<span style="color:#f92672">==</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">//here just aking sure that, we do not visit the same vertex twice, so making 3 to 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>                    grid[nx][ny]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                    q.push({nx,ny});
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="solution-using-dfs-1"><strong>Solution Using DFS</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y, vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> v)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(x<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> x<span style="color:#f92672">&gt;=</span>v.size() <span style="color:#f92672">||</span> y<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> y<span style="color:#f92672">&gt;=</span>v.size() <span style="color:#f92672">||</span> v[x][y]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(v[x][y]<span style="color:#f92672">==</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        v[x][y] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> ans <span style="color:#f92672">=</span> dfs(x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,y,v) <span style="color:#f92672">||</span> dfs(x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,y,v) <span style="color:#f92672">||</span> dfs(x,y<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,v) <span style="color:#f92672">||</span> dfs(x,y<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,v);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">is_Possible</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> v) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> v.size();
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> q;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;j<span style="color:#f92672">&lt;</span>n;j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(v[i][j]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(dfs(i,j,v)) <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="topological-sort"><strong>Topological sort</strong></h2>
+<p>Given a Directed Acyclic Graph (DAG) with V vertices and E edges, Find any Topological Sorting of that Graph.</p>
+<h3 id="solution-bfs-kahns-algo"><strong>Solution BFS (Kahn&rsquo;s Algo)</strong></h3>
+<p>BFS Approach || Kahn&rsquo;s Algo
+Idea</p>
+<p>The idea is that all nodes which will be at starting will have indegree 0.</p>
+<p><code>Algorithm</code></p>
+<p>Store Indegree of all nodes in Array.<br>
+Push nodes in Queue whose indegree == 0.<br>
+Now, For each node in Queue.<br>
+Pop the current node &amp; Store into resultant Array<br>
+Remove indegree count of all neighbours of current node.<br>
+If neighbours indegree becomes 0 the push into queue.<br>
+Finally, return resultant Array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> topoSort(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res;
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> indegree(V, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> nbr : adj[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>	            indegree[nbr]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> q;
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">if</span>(indegree[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>	            q.push(i);
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.empty())
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">int</span> curr <span style="color:#f92672">=</span> q.front(); q.pop();
+</span></span><span style="display:flex;"><span>	        res.push_back(curr);
+</span></span><span style="display:flex;"><span>	        
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> nbr : adj[curr])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>	            indegree[nbr]<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>	            <span style="color:#66d9ef">if</span>(indegree[nbr] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) q.push(nbr);
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h3 id="solution-dfs-approach"><strong>Solution DFS Approach</strong></h3>
+<p><code>Idea</code></p>
+<p>Node that comes at last must be present at last. Hence, the idea is to store last visited at bottom. Thus, Stack comes into picture.</p>
+<p><code>Algorithm</code></p>
+<p>Make visited Array to tackle both disconnected &amp; visited Nodes.
+Call DFS on each unvisited node
+Call DFS on unvisited Neighbours
+After making all calls to Neighbours Store current Node in a Stack.
+Finally, pop all the elements of stack into resultant Vector</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> start, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>vis, stack<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>s, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>	    vis[start] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> nbr : adj[start])
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>vis[nbr])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>	            dfs(nbr, vis, s, adj);
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    
+</span></span><span style="display:flex;"><span>	    s.push(start);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> topoSort(<span style="color:#66d9ef">int</span> V, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> adj[])
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> vis(V);
+</span></span><span style="display:flex;"><span>	    stack<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> s;
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>vis[i])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>	            dfs(i, vis, s, adj);
+</span></span><span style="display:flex;"><span>	        }
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> V; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	        res.push_back(s.top()); 
+</span></span><span style="display:flex;"><span>            s.pop();
+</span></span><span style="display:flex;"><span>	    }
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h2 id="further-improvement--reading">Further Improvement / reading</h2>
+<p>text</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

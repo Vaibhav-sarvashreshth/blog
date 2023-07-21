@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Vaibhav&#39;s Blogs</title>
     <link>https://Vaibhav-sarvashreshth.github.io/blog/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Vaibhav&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jul 2023 15:10:44 +0530</lastBuildDate><atom:link href="https://Vaibhav-sarvashreshth.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 15:10:44 +0530</lastBuildDate><atom:link href="https://Vaibhav-sarvashreshth.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First Post</title>
-      <link>https://Vaibhav-sarvashreshth.github.io/blog/posts/first-post/</link>
-      <pubDate>Fri, 21 Jul 2023 15:10:44 +0530</pubDate>
+      <title>Top 50 Graph Questions</title>
+      <link>https://Vaibhav-sarvashreshth.github.io/blog/posts/top-50_graph_problems/</link>
+      <pubDate>Thu, 20 Jul 2023 15:10:44 +0530</pubDate>
       
-      <guid>https://Vaibhav-sarvashreshth.github.io/blog/posts/first-post/</guid>
-      <description>Heading </description>
+      <guid>https://Vaibhav-sarvashreshth.github.io/blog/posts/top-50_graph_problems/</guid>
+      <description>Top 50 Graph Problems Looking to master graph theory and solve graph problems efficiently? You&amp;rsquo;re in the right place! This blog provides solutions to the top 50 graph problems along with multiple approaches for each problem. We also ensure that the written code is well-commented for better understanding.
+Graphs are essential data structures used in various fields, including computer science, data analysis, and network analysis. By gaining proficiency in graph theory and problem-solving, you can enhance your skills and tackle complex challenges effectively.</description>
+    </item>
+    
+    <item>
+      <title>Top 50 Tree Questions</title>
+      <link>https://Vaibhav-sarvashreshth.github.io/blog/posts/top-50-tree-problems/</link>
+      <pubDate>Thu, 20 Jul 2023 15:10:44 +0530</pubDate>
+      
+      <guid>https://Vaibhav-sarvashreshth.github.io/blog/posts/top-50-tree-problems/</guid>
+      <description></description>
     </item>
     
   </channel>
