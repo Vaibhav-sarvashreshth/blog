@@ -1,7 +1,7 @@
 baseURL = 'https://Vaibhav-sarvashreshth.github.io/blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-
+theme = "m10c"
 
 [params]
   author = "Christopher Hart"
@@ -16,3 +16,8 @@ title = 'My New Hugo Site'
     icon = "twitter"
     name = "Twitter"
     url = "https://twitter.com/_ChrisJHart"
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
