@@ -1,8 +1,7 @@
 ---
-title: Top Githun Commands that you should know
+title: Top Github Commands that you should know
 date: 2023-07-29T15:10:44+05:30
 draft: false
-tags: [github, github-commands, things-every-programmer-should-know] # tags nams should always be lowercase
 ---
 
 # GitHub Commands Tutorial
