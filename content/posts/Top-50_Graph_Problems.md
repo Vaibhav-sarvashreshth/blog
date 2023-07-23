@@ -10,6 +10,45 @@ Looking to master graph theory and solve graph problems efficiently? You're in t
 
 Graphs are essential data structures used in various fields, including computer science, data analysis, and network analysis. By gaining proficiency in graph theory and problem-solving, you can enhance your skills and tackle complex challenges effectively.
 
+
+List Of Questions :
+
+- [Number of Provinces](#number-of-provinces)
+- [Find the number of islands](#find-the-number-of-islands)
+- [Detect cycle in an undirected graph](#detect-cycle-in-an-undirected-graph)
+- [Hamiltonian Path](#hamiltonian-path)
+- [Prerequisite Tasks](#prerequisite-tasks)
+- [Course Schedule](#course-schedule)
+- [Circle of Strings](#circle-of-strings)
+- [Snake and Ladder problem](#snake-and-ladder-problem)
+- [Bipartite Graph](#bipartite-graph)
+- [Maximum Bipartite Matching](#maximum-bipartite-matching)
+- [Detect cycle in a directed graph](#detect-cycle-in-a-directed-graph)
+- [Find whether path exists](#find-whether-path-exists)
+- [Topological Sort](#topological-sort)
+- [Level of Nodes](#level-of-nodes)
+- [Possible paths between 2 vertices](#possible-paths-between-2-vertices)
+- [X Total Shapes](#x-total-shapes)
+- [Distance of nearest cell having 1](#distance-of-nearest-cell-having-1)
+- [Mother Vertex](#mother-vertex)
+- [Unit Area of largest region of 1’s](#unit-area-of-largest-region-of-1s)
+- [Rotten Oranges](#rotten-oranges)
+- [Minimum Swaps to Sort](#minimum-swaps-to-sort)
+- [Steps by Knight](#steps-by-knight)
+- [Implementing Dijkstra Algorithm](#implementing-dijkstra-algorithm)
+- [Neeman’s Shoes](#neemans-shoes)
+- [Minimum Spanning Tree](#minimum-spanning-tree)
+- [Strongly Connected Components (Kosaraju’s Algo)](#strongly-connected-components-kosarajus-algo)
+- [Bridge Edge in Graph](#bridge-edge-in-graph)
+- [Flood Fill Algorithm](#flood-fill-algorithm)
+- [Replace O’s with X’s](#replace-os-with-xs)
+- [Shortest Prime Path](#shortest-prime-path)
+- [Word Search](#word-search)
+- [Construct binary palindrome by repeated appending and trimming](#construct-binary-palindrome-by-repeated-appending-and-trimming)
+- [Word Boggle](#word-boggle)
+
+
+
 # Graph Problem Heading
 
 ## **Print adjacency list**
@@ -143,11 +182,11 @@ void dfs(vector<int> adj[],int i,vector<bool>&visited,vector<int>&ans)
 
 ```
 
-## **Find the number of islands**
+## **Number of Provinces**
 
-Given a grid of size n*m (n is the number of rows and m is the number of columns in the grid) consisting of '0's (Water) and '1's(Land). Find the number of islands.
+Given an undirected graph with V vertices. We say two vertices u and v belong to a single province if there is a path from u to v or v to u. Your task is to find the number of provinces.
 
-Note: An island is either surrounded by water or boundary of grid and is formed by connecting adjacent lands horizontally or vertically or diagonally i.e., in all 8 directions.
+Note: A province is a group of directly or indirectly connected cities and no other cities outside of the group. 
 
 
 ### **Solution (using BFS)**
@@ -1286,6 +1325,852 @@ it is a mother vertex.
 	}
 
 ```
+
+## **Unit Area of largest region of 1's**
+
+Given a grid of dimension nxm containing 0s and 1s. Find the unit area of the largest region of 1s.
+Region of 1's is a group of 1's connected 8-directionally (horizontally, vertically, diagonally).
+
+
+## Solution
+
+Same as [X Total Shapes](#x-total-shapes). Just we have to maintaine a max varialbe which will store tyhe maximum value of area.
+
+### Code (C++)
+
+```cpp
+    int n,m,count=0,max=0;
+    int dx[8] = { -1, 1, 0, 0, -1, -1, 1, 1};
+    int dy[8] = {0, 0, -1, 1, -1, 1, -1, 1};
+    bool val(int r,int c)
+    {
+        if(r<0 || r>=n || c<0 || c>=m)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    void dfs(int r,int c, vector<vector<int>>& visited)
+    {
+        visited[r][c]=1;
+        count++;
+        if(max<count)
+        {
+            max = count;
+        }
+
+        for(int i=0;i<8;i++)
+        {
+            int nr=r+dx[i];
+            int nc=c+dy[i];
+            if(val(nr,nc) && visited[nr][nc]==0)
+            {
+                dfs(nr,nc,visited);
+                
+            }
+        }
+        
+    }
+
+    int findMaxArea(vector<vector<int>>& grid)
+    {
+        n = grid.size();
+        m = grid[0].size();
+        int no_of_islands=0;
+        
+        
+        vector<vector<int>> visited(n,vector<int>(m,0));
+        
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(grid[i][j]==0)
+                {
+                    visited[i][j]=1;
+                }
+            }
+        }
+        
+        
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(!visited[i][j])
+                {
+                    dfs(i,j,visited);
+                    count=0;
+                }   
+            }
+        }
+        return max;
+        
+    }
+```
+
+## **Rotten Oranges**
+Given a grid of dimension nxm where each cell in the grid can have values 0, 1 or 2 which has the following meaning:
+0 : Empty cell
+1 : Cells have fresh oranges
+2 : Cells have rotten oranges
+
+We have to determine what is the minimum time required to rot all oranges. A rotten orange at index [i,j] can rot other fresh orange at indexes [i-1,j], [i+1,j], [i,j-1], [i,j+1] (up, down, left and right) in unit time. 
+
+
+
+## Solution
+Here approach is that, you have to store all rotten oranges in a queue and then make their neighbour oranges rooten.
+And then push them into queue. And then increment the time by 1. Do this till all oranges get rotted.
+
+
+### Code (C++)
+
+```cpp
+    int dx[4]={-1,1,0,0};
+    int dy[4]={0,0,-1,1};
+    
+    bool val(int nx,int ny,int r,int c)
+    {
+        if(nx<0 || nx>=r || ny<0 || ny>=c)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    int orangesRotting(vector<vector<int>>& grid)
+    {
+        
+        int r=grid.size();
+        int c=grid[0].size();
+        queue<pair<int,int>> q;
+        int ans=-1;
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                if(grid[i][j]==2)
+                {
+                    q.push({i,j});
+                }
+            }
+        }
+        
+        while(!q.empty())
+        {
+            int qs=q.size();
+            while(qs--)
+            {
+                auto curr=q.front();
+                q.pop();
+                for(int i=0;i<4;i++)
+                {
+                    int nx=curr.first+dx[i];
+                    int ny=curr.second+dy[i];
+                    if(val(nx,ny,r,c) && grid[nx][ny]==1)
+                    {
+                        grid[nx][ny]=2;
+                        q.push({nx,ny});
+                        
+                    }
+                }
+                
+            }
+            ans++;
+            
+        }
+
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                if(grid[i][j]==1)
+                {
+                    return -1;
+                }
+            }
+        }
+        
+        return ans;
+        
+    }
+```
+
+
+## **Steps by Knight**
+Given a square chessboard, the initial position of Knight and position of a target. Find out the minimum steps a Knight will take to reach the target position.
+
+Note:
+The initial and the target position coordinates of Knight have been given according to 1-base indexing.
+
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    int dx[8] = {2,2,-2,-2,1,-1,1,-1};
+    int dy[8] = {1,-1,1,-1,2,2,-2,-2};
+    
+    
+    // global variable dist
+    
+    vector<vector<int>> dist;
+    
+    bool check(int x,int y,int N)
+    {
+        return (x >= 0 && y >= 0 && x <= N && y <= N);
+    }
+    
+	int minStepToReachTarget(vector<int>&KnightPos,vector<int>&TargetPos,int N)
+	{
+	    
+	    if(KnightPos[0] == TargetPos[0] && KnightPos[1] == TargetPos[1])
+	    {
+	        return 0;
+	    }
+	    
+	    dist = vector<vector<int>>(N+1,vector<int>(N+1,0));
+	    
+	    // initialize with N+1 as indexing start from 1
+	    
+        queue<pair<int,int>> q;
+	    q.push(make_pair(KnightPos[0],KnightPos[1]));
+	    
+	    while(!q.empty())
+	    {
+            pair<int,int> xx = q.front();
+            q.pop();
+            for(int i=0;i<8;i++)
+            {
+                int nr=xx.first + dx[i];
+                int nc=xx.second + dy[i];
+                
+                if(check(nr,nc,N) && (dist[nr][nc]) == 0)
+                {
+                    dist[nr][nc] = dist[xx.first][xx.second] + 1;
+                    q.push(make_pair(nr,nc));
+                    if(nr==TargetPos[0] && nc==TargetPos[1])
+                    {
+                        return dist[TargetPos[0]][TargetPos[1]];
+                    }
+                }
+            }
+        }
+        
+        // if still not return then that eans its imoossible 
+        
+        // return -1
+        
+        return -1;
+ 
+	}
+```
+
+## **Implementing Dijkstra Algorithm**
+
+Given a weighted, undirected and connected graph of V vertices and an adjacency list adj where adj[i] is a list of lists containing two integers where the first integer of each list j denotes there is edge between i and j , second integers corresponds to the weight of that  edge . You are given the source vertex S and You to Find the shortest distance of all the vertex's from the source vertex S. You have to return a list of integers denoting shortest distance between each node and Source vertex S.
+ 
+
+Note: The Graph doesn't contain any negative weight cycle.
+
+## Solution
+
+Dijkstra's algorithm works by visiting vertices in the graph starting with the object's starting vertex, S, and it iterates a greedy loop over the edge of the vertex set. The algorithm keeps track of the currently known shortest distance from each node to the source node and it updates these values if it finds a shorter path.
+
+### Code (C++)
+
+```cpp
+
+vector <int> dijkstra(int V, vector<vector<pair<int,int>>>& adj, int S)
+{
+    // Create a priority queue to store vertices that
+    // are being preprocessed. This is weird syntax in C++.
+    // Refer below explanation for syntax.
+    priority_queue< pair<int,int>, vector <pair<int,int>> , greater<pair<int,int>> > pq;
+ 
+    // Create a vector for distances and initialize all
+    // distances as infinite (INF)
+    vector<int> dist(V, INT_MAX);
+ 
+    // Insert source itself in priority queue and initialize
+    // its distance as 0.
+    pq.push(make_pair(0, S));
+    dist[S] = 0;
+ 
+    /* Looping till priority queue becomes empty (or all
+      distances are not finalized) */
+    while (!pq.empty())
+    {
+        // The first vertex in pair is the minimum distance
+        // vertex, extract it from priority queue.
+        // vertex label is stored in second of pair (it
+        // has to be done this way to keep the vertices
+        // sorted distance (distance must be first item
+        // in pair)
+        int u = pq.top().second;
+        pq.pop();
+ 
+        // 'i' is used to get all adjacent vertices of a vertex
+        vector<pair<int, int>>::iterator i;
+        for (i = adj[u].begin(); i != adj[u].end(); ++i)
+        {
+            // Get vertex label and weight of current adjacent
+            // of u.
+            int v = (*i).first;
+            int weight = (*i).second;
+ 
+            //  If there is shorted path to v through u.
+            if (dist[v] > dist[u] + weight)
+            {
+                // Updating distance of v
+                dist[v] = dist[u] + weight;
+                pq.push(make_pair(dist[v], v));
+            }
+        }
+    }
+ 
+    return dist;
+}
+
+    
+```
+## **Neeman's Shoes**
+Due to the second wave of Gorona virus, Geekland imposed another lockdown and Geek has gained some wieght. Now Geek has decided to exercise.
+There are N intersections in the city numbered from 0 to N-1 and M bidirectional roads each road connecting two intersections. All the intersections are connected to each-other through some set of roads, ith road connect intersections A[i][0] and A[i][1] and is of length A[i][2].
+Every morning Geek will start at intersection src and will run/walk upto intersection dest. Geek only has one hour in the morning so he will choose to cover the shortest path from src to dest.
+After planning his exercising schedule, Geek wants to buy the perfect shoes to walk/run in the morning. He goes to Neeman's Shoe factory which is the National Shoe factory of Geekland. 
+
+Geek sees that there are two types of shoes "Neeman's Wool Joggers" and "Neeman's Cotton Classics", "Neeman's Wool Joggers" are good for running and "Neeman's Cotton Classics" are good for walking.
+Geek is confused which shoes to buy, so he comes up with a strategy. If the distance he has to cover in the morning is less than or equal to X, then he will walk the distance, therefore he will buy "Neeman's Cotton Classics". If the distance is greater than X, he will buy "Neeman's Wool Joggers". Geek is too lazy to calculate the shortest distance between two intersections src and dest. Help him decide which shoes to buy.
+
+
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    typedef pair<int, int> iPair; 
+
+    string exercise(int N, int M, vector<vector<int>> A, int src, int dest, int X)
+    {
+        
+     vector<vector<int>>adj[N] ;
+       
+       for( auto i : A )
+       {
+           adj[i[0]].push_back({ i[1] , i[2]}) ;
+           adj[i[1]].push_back({ i[0] , i[2]}) ;
+           
+       }
+       vector<int>distance( N , INT_MAX ) ;
+       distance[src] = 0 ;
+
+       priority_queue<iPair, vector<iPair>, greater<iPair> >pq;
+       pq.push({ 0 , src }) ;
+       
+       while(!pq.empty())
+       {
+           int u = pq.top().second ;
+           pq.pop() ;
+           for( int j = 0 ; j < adj[u].size() ; j++ )
+           {
+               int v = adj[u][j][0] ;
+               int weight =  adj[u][j][1] ;
+               
+               if( distance[u] + weight < distance[v])
+               {
+                   distance[v] = distance[u] + weight ;
+                   pq.push({ distance[v] , v }) ;
+               }
+           }
+           
+       }
+       
+       int d = distance[dest] ;
+       
+       if(d<=X)
+       {
+           return  "Neeman's Cotton Classics" ;
+       }
+       
+       return "Neeman's Wool Joggers" ;
+    }
+    
+```
+
+## **Minimum Spanning Tree**
+
+Given a weighted, undirected and connected graph of V vertices and E edges. The task is to find the sum of weights of the edges of the Minimum Spanning Tree.
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+int spanningTree(int V, vector<vector<int>> adj[])
+    {
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+       pq.push({0,0});
+       vector<bool>visit(V,false);
+       int ans=0;
+       while(!pq.empty()){
+           auto p=pq.top();
+           pq.pop();
+           int x=p.second;
+           int w=p.first;
+           if(visit[x])continue;
+           visit[x]=true;
+           ans+=w;
+           for(auto y:adj[x]){
+               if(!visit[y[0]]){
+                   pq.push({y[1],y[0]});
+               }
+           }
+       }
+       return ans;
+    }
+    
+```
+## **Strongly Connected Components (Kosaraju's Algo)**
+
+Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, Find the number of strongly connected components in the graph.
+ 
+
+## Solution
+
+Approach :
+
+    sort the graph topologically and store it in the stack.
+    transpose the given graph
+    do the dfs(accordig to the top element of the stack you got from topo sort) and count everytime you run the dfs
+
+### Code (C++)
+
+```cpp
+void dfs(int n, vector<vector<int>>& adj, vector<int> &v, stack<int> &st)
+{       
+        v[n] = 1;
+        
+        for(int ch : adj[n])
+        {
+                
+            if(!v[ch])
+            {
+                v[ch] = 1;
+                dfs(ch, adj, v, st);
+            }
+        }
+        
+        st.push(n);
+    }
+    
+      // Simple DFS on transposed Graph
+    void tdfs(int n, vector <vector<int>> &adj, vector <int> &v)
+    {
+            
+       v[n] = 1;
+       
+       for(int k : adj[n])
+       {
+           
+           if(!v[k])
+           {
+               v[k] = 1;
+               tdfs(k, adj, v);
+           }
+       }
+    }   
+    
+    
+    int kosaraju(int V, vector<vector<int>>& adj)
+    {
+            
+        vector <int> visited(V, 0);
+        stack <int> st;
+        
+        // Take on Stack
+        for(int i = 0;i < V;i ++)
+        {
+            if(!visited[i])
+            {
+                dfs(i, adj, visited, st);
+            }
+        }
+        
+        // Transpose Of Graph
+        vector <vector <int>> trans(V);
+        
+        for(int i = 0;i < V;i++)
+        {
+            visited[i] = 0; // Reset visited 
+            for(int nr : adj[i])
+            {
+                trans[nr].push_back(i);        
+            }
+        }
+                
+        // DFS 
+        int ans = 0;
+
+        while(!st.empty())
+        {
+            
+            int tp = st.top();
+            st.pop();
+            
+            if(!visited[tp])
+            {
+                tdfs(tp, trans, visited);
+                ans++;
+            }
+        
+        }
+        
+        return ans;
+    }
+    
+```
+
+
+## **Bridge edge in a graph**
+Given a Graph of V vertices and E edges and another edge(c - d), the task is to find if the given edge is a Bridge. i.e., removing the edge disconnects the graph.
+
+
+## Solution
+If in a graph we start traversing from a given node C with a given condition (as in LINE 15) [please read conditions]
+and even then if node D gets visited, it means there is another edge available in the graph to reach D.
+Because of this, even if the edge from C to D is removed, the Graph will not be divided into two components.
+
+So, if node D gets visited, it means the edge from C to D is not a Bridge.
+And if node D remains UNVISITED even after traversing the entire graph, it means the edge from C to D is a BRIDGE.
+
+
+### Code (C++)
+
+```cpp
+    void dfs( int node, vector<int> adj[], int c , int d,vector<int> &visited)
+	{
+	    visited[node] = true ; 
+	    
+	    for(auto nbr : adj[node])
+	    {
+	        if( !visited[nbr] && (node!=c || nbr != d) )
+	        dfs(nbr, adj, c, d, visited ) ; 
+	    }
+	}
+	
+	
+    int isBridge(int V, vector<int> adj[], int c, int d) 
+    {
+        vector<int> visited(V, false) ;
+        dfs( c , adj , c, d , visited ) ;//send C as initial node 
+
+        return !visited[d] ; 
+    }
+    
+```
+
+
+## ** **
+
+
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    
+```
+## **Flood fill Algorithm**
+
+An image is represented by a 2-D array of integers, each integer representing the pixel value of the image.
+
+Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill, and a pixel value newColor, "flood fill" the image.
+
+To perform a "flood fill", consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on. Replace the color of all of the aforementioned pixels with the newColor.
+
+## Solution
+
+Just a simple DFS question.
+
+### Code (C++)
+
+```cpp
+    
+    int r ;
+    int c ;
+    int dx[4] = {1,-1,0,0};
+    int dy[4] = {0,0,-1,1};
+    int oldColor;
+    
+    void dfs(vector<vector<int>>& image, int sr, int sc, int newColor,vector<vector<int>>& visited)
+    {
+        visited[sr][sc] = 1;
+        
+        
+            for(int i=0;i<4;i++)
+            {
+                int x = dx[i]+sr;
+                int y = dy[i]+sc;
+                
+                if(x >= 0 && x < r && y >= 0 && y < c && image[x][y] == oldColor && visited[x][y]==0  )
+                {
+                    image[x][y] = newColor;
+                    dfs(image,x,y,newColor,visited);
+                }
+            }
+        
+        
+        
+    }
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor)
+    {
+        // Code here 
+        
+        
+        
+        r = image.size();
+        c = image[0].size();
+        vector<vector<int>>visited(r,vector<int>(c,0));
+        oldColor = image[sr][sc];
+        image[sr][sc] = newColor;
+        dfs(image,sr,sc,newColor,visited);
+        return image;
+        
+    }
+```
+
+## **Replace O's with X's**
+
+Given a matrix mat of size N x M where every element is either O or X.
+Replace all O with X that are surrounded by X.
+A O (or a set of O) is considered to be surrounded by X if there are X at locations just below, just above, just left and just right of it.
+
+Example 1:
+
+Input: n = 5, m = 4
+mat = {{'X', 'X', 'X', 'X'}, 
+       {'X', 'O', 'X', 'X'}, 
+       {'X', 'O', 'O', 'X'}, 
+       {'X', 'O', 'X', 'X'}, 
+       {'X', 'X', 'O', 'O'}}
+Output: ans = {{'X', 'X', 'X', 'X'}, 
+               {'X', 'X', 'X', 'X'}, 
+               {'X', 'X', 'X', 'X'}, 
+               {'X', 'X', 'X', 'X'}, 
+               {'X', 'X', 'O', 'O'}}
+Explanation: Following the rule the above 
+matrix is the resultant matrix. 
+
+
+## Solution
+    We will use boundary DFS to solve this problem
+        
+    Let's analyze when an 'O' cannot be flipped,
+    if it has atleast one 'O' in it's adjacent, AND ultimately this chain of adjacent 'O's is connected to some 'O' which lies on boundary of board
+        
+    consider these two cases for clarity :
+      
+        O's won't be flipped          O's will be flipped
+        [X O X X X]                   [X X X X X]     
+        [X O O O X]                   [X O O O X]
+        [X O X X X]                   [X O X X X] 
+        [X X X X X]                   [X X X X X]
+      
+      So we can conclude if a chain of adjacent O's is connected some O on boundary then they cannot be flipped
+      
+    
+        
+      Steps to Solve :
+      1. Move over the boundary of board, and find O's 
+      2. Every time we find an O, perform DFS from it's position
+      3. In DFS convert all 'O' to '#'      (why?? so that we can differentiate which 'O' can be flipped and which cannot be)   
+      4. After all DFSs have been performed, board contains three elements,#,O and X
+      5. 'O' are left over elements which are not connected to any boundary O, so flip them to 'X'
+      6. '#' are elements which cannot be flipped to 'X', so flip them back to 'O'
+
+
+### Code (C++)
+
+```cpp
+
+    void DFS(vector<vector<char>>& mat, int i, int j, int n, int m)
+    {
+        if(i<0 or j<0 or i>=n or j>=m or mat[i][j] != 'O') return;
+        mat[i][j] = '#';
+        DFS(mat, i-1, j, n, m);
+        DFS(mat, i+1, j, n, m);
+        DFS(mat, i, j-1, n, m);
+        DFS(mat, i, j+1, n, m);
+    }
+    
+    vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
+    {
+         if(n == 0) return mat;  
+            
+         
+         //Moving over firts and last column   
+         for(int i=0; i<n; i++) {
+             if(mat[i][0] == 'O')
+                 DFS(mat, i, 0, n, m);
+             if(mat[i][m-1] == 'O')
+                 DFS(mat, i, m-1, n, m);
+         }
+            
+            
+         //Moving over first and last row   
+         for(int j=0; j<m; j++) {
+             if(mat[0][j] == 'O')
+                 DFS(mat, 0, j, n, m);
+             if(mat[n-1][j] == 'O')
+                 DFS(mat, n-1, j, n, m);
+         }
+            
+         for(int i=0; i<n; i++)
+             for(int j=0; j<m; j++)
+             {
+                 if(mat[i][j] == 'O')
+                     mat[i][j] = 'X';
+                 if(mat[i][j] == '#')
+                     mat[i][j] = 'O';
+             }
+     
+        return mat;
+        
+        
+    }
+    
+```
+
+## ** Word Search**
+
+Given a 2D board of letters and a word. Check if the word exists in the board. The word can be constructed from letters of adjacent cells only. ie - horizontal or vertical neighbors. The same letter cell can not be used more than once.
+
+Example 1:
+
+Input: board = {{a,g,b,c},{q,e,e,l},{g,b,k,s}},
+word = "geeks"
+Output: 1
+Explanation: The board is-
+a g b c
+q e e l
+g b k s
+The letters which are used to make the
+"geeks" are colored.
+
+Example 2:
+
+Input: board = {{a,b,c,e},{s,f,c,s},{a,d,e,e}},
+word = "sabfs"
+Output: 0
+Explanation: The board is-
+a b c e
+s f c s
+a d e e
+Same letter can not be used twice hence ans is 0
+
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    bool solve(int  i , int j , int ind , string word , vector<vector<char>> &board , vector<vector<int>> &vis)
+    {
+       if(ind == word.size())
+       return true;
+       
+       int n = board.size(), m = board[0].size();
+       
+       if(i>= n || j>=m || i<0 || j<0 || vis[i][j]==1 || board[i][j] != word[ind])
+       return false;
+     
+       vis[i][j]  = 1;
+       if(solve(i+1 , j , ind + 1 , word , board , vis) || 
+       solve(i , j+1 , ind + 1 , word , board , vis) || 
+       solve(i-1 , j , ind + 1 , word , board , vis) || 
+       solve(i , j-1 , ind + 1 , word , board , vis))
+       return true;
+       
+       vis[i][j] = 0;
+       
+       return false;
+       
+    }
+    bool isWordExist(vector<vector<char>>& board, string word)
+    {
+        // Code here
+        
+         int m = board[0].size() , n = board.size();
+        vector<vector<int>> vis(n , vector<int> (m , 0));
+        for(int  i = 0 ;i < n ; i++)
+        {
+            for(int j = 0 ; j   < m ; j++){
+                if(board[i][j] == word[0])
+                  if(solve(i, j , 0 , word , board , vis))
+                    return true;
+            }
+        }
+        return false;
+        
+        
+    }
+```
+
+## **Construct binary palindrome by repeated appending and trimming**
+Given n and k, Construct a palindrome of size n using the binary representation of the number k.To construct the palindrome you can use the binary number of size k as many times as you wish and also you can trim all the  zeros from the end.The palindrome must always begin with 1 and contains the maximum number of zeros.
+ 
+
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    string binaryPalindrome(int n,int k)
+    {
+       // Complete the function
+       
+       
+       
+       
+       string s(n,'0');
+       
+       for(int i=0;i<n;)
+       {
+               s[i]='1';
+               s[n-1-i]='1';
+               i+=k;
+           
+       }
+       
+       return s; 
+    }
+```
+
+
 ## Further Improvement / reading
 
 text
