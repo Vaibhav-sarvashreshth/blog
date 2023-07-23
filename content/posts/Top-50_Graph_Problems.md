@@ -16,9 +16,6 @@ Graphs are essential data structures used in various fields, including computer 
 
 Given the adjacency list of a bidirectional graph. Your task is to copy/clone the adjacency list for each vertex and return a new list.
 
-## Solution
-
-Discuss the first solution to the graph problem. Explain the approach, algorithm, or technique used in this solution. Provide step-by-step explanations, highlighting any key insights or observations.
 
 ### Code (C++)
 
@@ -1021,7 +1018,274 @@ Finally, pop all the elements of stack into resultant Vector
 	    return res;
 	}
 ```
+## **Level Of Nodes**
 
+Given a Undirected Graph with V vertices and E edges, Find the level of node X. if X does not exist in the graph then print -1.
+Note: Traverse the graph starting from vertex 0.
+
+## Solution
+Just do a simple BFS and , when node_we_want == it , then just return level +1 (here level variable is the level of the parent).
+
+
+### Code (C++)
+
+```cpp
+int nodeLevel(int V, vector<int> adj[], int X) 
+	{   
+	    queue<pair<int, int> > q; 
+	    q.push({0,0});
+	    vector<int > vis(V , 0 );
+	    vis[0] = 1 ;
+
+	    while(!q.empty())
+        {
+	        int node = q.front().first;
+	        int level = q.front().second;
+	        q.pop();
+	        for(auto it : adj[node])
+            {
+	            if(X == it)return level +1 ;
+	            if(vis[it] == 0 )
+                {
+	                q.push({it,level +1 });
+	                vis[it] = 1;
+	            }
+	               
+	        }
+	    }
+
+	    return -1;
+	}
+```
+
+## **Possible paths between 2 vertices**
+
+Given a Directed Graph having V nodes numbered from 0 to V-1, and E directed edges. Given two nodes, source and destination, count the number of ways or paths between these two vertices in the directed graph. These paths should not contain any cycle.
+Note: Graph doesn't contain multiple edges, self-loop, and cycles.
+
+## Solution
+
+Just do a BFS starting from source and if you found a node such that node == destination, then increment res and continue the loop. If you doesnt find a node == destination then put all its neighbours into queue. 
+
+### Code (C++)
+
+```cpp
+int countPaths(int V, vector<int> adj[], int source, int destination) {
+        int res = 0;
+        queue<int> q;
+        q.push(source);
+        while (!q.empty())
+        {
+            int currentNode = q.front();
+            q.pop();
+            if (currentNode == destination)
+            {
+                res++;
+                continue;
+            }
+            for (int neighbor : adj[currentNode])
+            {
+                q.push(neighbor);
+            }
+        }
+        return res;
+    }
+
+```
+
+## **X Total Shapes**
+
+Given  a grid of n*m consisting of O's and X's. The task is to find the number of 'X' total shapes.
+Note: 'X' shape consists of one or more adjacent X's (diagonals not included).
+
+## Solution
+Easy problem, just do a DFS and mark the nodes as visited.
+The no of times you are going to do DFS the no of X total shapes will be there.
+
+
+### Code (C++)
+
+```cpp
+/* here I used vis array of 100 * 100 dimension , you can create a dynamic vector
+and allocate the size accordingly, I just didnt done that beacause I am lazy to push it aas a parameter in every function :) 
+
+*/
+
+    int vis[100][100]={{0}};
+    int dx[4]={-1,1,0,0};
+    int dy[4]={0,0,-1,1};
+    int n1,m1;
+    bool val(int r,int c)
+    {
+        if(r>=n1 || r<0 || c>=m1 || c<0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    void dfs(int r,int c , vector<vector<char>>& grid)
+    {
+        vis[r][c]=1;
+        
+        for(int i=0;i<4;i++)
+        {
+            int nr=r+dx[i];
+            int nc=c+dy[i];
+            if(vis[nr][nc]==0 && val(nr,nc)==true && grid[nr][nc]!='O')
+            {
+                dfs(nr,nc,grid);
+            }
+        }
+    }
+    int xShape(vector<vector<char>>& grid) 
+    {
+        // Code here
+        
+        int count=0;
+        int r=grid.size();
+        int c=grid[0].size();
+        
+       
+        n1=r;
+        m1=c;
+        
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                if(!vis[i][j] && grid[i][j]!='O')
+                {
+                    dfs(i,j,grid);
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+```
+
+## **Distance of nearest cell having 1**
+
+Given a binary grid of n*m. Find the distance of the nearest 1 in the grid for each cell.
+The distance is calculated as |i1  - i2| + |j1 - j2|, where i1, j1 are the row number and column number of the current cell, and i2, j2 are the row number and column number of the nearest cell having value 1. There should be atleast one 1 in the grid.
+
+## Solution
+
+
+
+### Code (C++)
+
+```cpp
+    int dx[4]={-1,1,0,0};
+    int dy[4]={0,0,-1,1};
+    
+    bool val(int nx,int ny,int r,int c)
+    {
+        if(nx<0 || nx>=r || ny<0 || ny>=c)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    
+	vector<vector<int>>nearest(vector<vector<int>>grid)
+	{
+	    // Code here
+	    int r=grid.size();
+	    int c=grid[0].size();
+	    vector<vector<int>> v(r,vector<int>(c,-1));
+	    queue<pair<int,int>>q;
+	    
+	    for(int i=0;i<r;i++)
+	    {
+	        for(int j=0;j<c;j++)
+	        {
+	            if(grid[i][j]==1)
+	            {
+	                // if block is 1 then push in queue
+	                v[i][j]=0;
+	                q.push({i,j});
+	            }
+	        }
+	    }
+	    
+	    while(!q.empty())
+	    {
+	        pair<int,int> curr=q.front();
+	        q.pop();
+	        
+	        for(int i=0;i<4;i++)
+	        {
+	            int nx=curr.first+dx[i];
+	            int ny=curr.second+dy[i];
+	            
+	            if(val(nx,ny,r,c) && v[nx][ny]==-1)
+	            {
+	                v[nx][ny]=v[curr.first][curr.second]+1;
+	                q.push({nx,ny});
+	                
+	            }
+	        }
+	    }
+	    return v;
+
+	}
+```
+## **Mother Vertex**
+Given a Directed Graph, find a Mother Vertex in the Graph (if present). 
+A Mother Vertex is a vertex through which we can reach all the other vertices of the Graph.
+
+## Solution
+Do a DFS from every vertex and after doing DFS if no of visited vertex +1(including mother vertex) == no of titial vertex, then 
+it is a mother vertex. 
+
+
+### Code (C++)
+
+```cpp
+    void dfs(int src,vector<int>vec[],vector<int>&visited,int &count)
+    {
+        visited[src] = true;
+        
+        for(auto e:vec[src])
+        {
+            if(!visited[e])
+            {
+                count++;
+                dfs(e,vec,visited,count);
+            }
+        }
+    }
+
+	int findMotherVertex(int V, vector<int>adj[])
+	{
+	    
+	    int n=V;
+	    for(int i=0;i<n;i++)
+        {
+	        int count =0;
+	        vector<int>visited(n,false);
+	        
+	        dfs(i,adj,visited,count);
+	        
+	        if(count+1==n)
+            {
+	            return i;
+            }
+	    }   
+
+        return -1;
+	    
+	}
+
+```
 ## Further Improvement / reading
 
 text
