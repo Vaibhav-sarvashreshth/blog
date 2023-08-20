@@ -73,7 +73,7 @@ This problem is similar to Knapsack Problem.
        int n=arr.size();
        bool t[n+1][sum+1]={true};
        
-       // makae first row as false, as with empty sack you cant make any sum (except 0)
+       // make first row as false, as with empty sack you cant make any sum (except 0)
        for(int j=1;j<=sum;j++)
        {
             t[0][j]=false;
@@ -402,14 +402,8 @@ In other words, given two integer arrays val[0..N-1] and wt[0..N-1] which repres
 ```cpp
     int knapSack(int W, int wt[], int val[], int n) 
     { 
-       // Your code here
-       int dp[n+1][W+1]={{0}};
-       for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= W; j++) {
-            if (i == 0 || j == 0)
-                dp[i][j] = 0;
-        }
-    }
+       // Declaring and Initialising the dp
+       vector<vector<int>>dp(n+1,vector<int>(W+1,0));
        
        
        for(int i=1;i<=n;i++)

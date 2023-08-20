@@ -1,4 +1,4 @@
-#!/bin/bash
+https://cses.fi/problemset/#!/bin/bash
 echo "Starting to update the repo......"
 
 git status

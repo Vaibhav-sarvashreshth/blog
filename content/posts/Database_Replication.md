@@ -1,5 +1,5 @@
 ---
-title: Database Replication
+title: Database Replication'
 date: 2023-06-18T15:10:44+05:30
 draft: false
 ---
