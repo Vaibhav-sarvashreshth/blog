@@ -1,6 +1,6 @@
 ---
 title: Database Sharding
-date: 2023-07-20T15:10:43+05:30
+date: 2023-07-10T15:10:43+05:30
 draft: false
 ---
 

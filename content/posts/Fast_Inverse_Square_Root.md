@@ -1,6 +1,6 @@
 ---
 title: Fast Inverse Square Root - The Genius of a Timeless Algorithm
-date: 2023-06-21T15:10:44+05:30
+date: 2023-07-12T15:10:44+05:30
 draft: false
 ---
 

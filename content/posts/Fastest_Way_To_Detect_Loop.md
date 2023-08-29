@@ -1,6 +1,6 @@
 ---
 title: Fastest way to detect loop in a linked list
-date: 2023-06-21T15:10:44+05:30
+date: 2023-07-16T15:10:44+05:30
 draft: false
 ---
 
