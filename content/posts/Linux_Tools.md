@@ -1,6 +1,6 @@
 ---
 title: Unveiling Ubuntu Tools: A Comprehensive Guide
-date: 2023-09-16T15:10:44+05:30
+date: 2023-10-16T15:10:44+05:30
 draft: false
 ---
 
