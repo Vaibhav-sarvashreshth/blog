@@ -4,7 +4,7 @@ date: 2023-07-18T15:10:44+05:30
 draft: false
 ---
 
-1. Two Sum 
+## 1. Two Sum 
 
 ```C++
 #include <vector>
@@ -43,7 +43,7 @@ int main() {
 
 ```
 
-Add Two Numbers:
+## 2. Add Two Numbers:
 
 Problem statement : 
 
@@ -54,11 +54,12 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 Solution :
 
-
+```C++
 	int c = 0;
     ListNode newHead(0);
     ListNode *t = &newHead;
-    while(c || l1 || l2) {
+    while(c || l1 || l2)
+    {
         c += (l1? l1->val : 0) + (l2? l2->val : 0);
         t->next = new ListNode(c%10);
         t = t->next;
@@ -68,18 +69,18 @@ Solution :
     }
     return newHead.next;
 	
-	
-	
+```	
 	
 ======================================
 
-3. Longest Substring without repeating charater :
+## 3. Longest Substring without repeating charater :
 
 
 Problem statement :
 
 
 Solution :
+```C++
 int lengthOfLongestSubstring(string s)
     {
 
@@ -98,6 +99,7 @@ int lengthOfLongestSubstring(string s)
 
 }
 
+```
 
 =========================================
 
@@ -144,18 +146,22 @@ Do not ignore any characters other than the leading whitespace or the rest of th
 
 
 Solution :
-int myAtoi(string s) {
+``` C++
+int myAtoi(string s)
+{
         int len = s.size();
         double num = 0;
         int i=0;
-        while(s[i] == ' '){
+        while(s[i] == ' ')
+        {
             i++;
         }
         bool positive = s[i] == '+';
         bool negative = s[i] == '-';
         positive == true ? i++ : i;
         negative == true ? i++ : i;
-        while(i < len && s[i] >= '0' && s[i] <= '9'){
+        while(i < len && s[i] >= '0' && s[i] <= '9')
+        {
             num = num*10 + (s[i]-'0');
             i++;
         }
@@ -167,12 +173,13 @@ int myAtoi(string s) {
         return int(num);
     }
 	
-11. 
+```
+## 11. Container With Most Water
 
 
 Problem Statement :
 
-Container With Most Water
+
 
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 
@@ -185,6 +192,8 @@ Notice that you may not slant the container
 
 
 Solutions :
+
+```c++
 
  long long trappingWater(int arr[], int n)
     {
@@ -211,13 +220,12 @@ Solutions :
         
         return water;
     }
-	
-	
-	=================================
+
+```
 	
 
 
-13. Roman to Integer
+## 13. Roman to Integer
 
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -242,7 +250,8 @@ Given a roman numeral, convert it to an integer.
 
 Solution :
 
-nt romanToInt(string s) 
+```c++
+int romanToInt(string s) 
 {
     unordered_map<char, int> T = { { 'I' , 1 },
                                    { 'V' , 5 },
@@ -268,11 +277,12 @@ nt romanToInt(string s)
    return sum;
 }
 
+```
 
-===============================
 
 
- Longest Common Prefix
+
+## Longest Common Prefix
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
@@ -293,6 +303,7 @@ The code below is very much self explanatory.
 We first sort the array of strings.
 Then, we choose the first and last string in the array. [They are supposed to be the most different among all the pairs of strings in the sorted array]
 We just compare how many common characters match from index i = 0 of these two strings.
+```c++
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& str) {
@@ -304,11 +315,14 @@ public:
         string a = str[0];
         string b = str[n-1];
         
-        for(int i=0; i<a.size(); i++){
-            if(a[i]==b[i]){
+        for(int i=0; i<a.size(); i++)
+        {
+            if(a[i]==b[i])
+            {
                 ans = ans + a[i];
             }
-            else{
+            else
+            {
                 break;
             }
         }
@@ -318,10 +332,10 @@ public:
     }
 };
 
+```
 
-======================
 
-5. 3Sum
+## 5. 3Sum
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
@@ -348,7 +362,7 @@ Solution :
 
 	Using 2 Pointer :
 	
-	
+```c++
 	
 	vector<vector<int>> threeSum(vector<int>& nums) {
 	std::vector<vector<int>> result;
@@ -384,11 +398,11 @@ Solution :
 	}
 	return result;
 }
+```
 
+## 19. Remove the nth node from linked list :
 
-19. Remove the nth node from linked list :
-
-
+```c++
 ListNode* removeNthFromEnd(ListNode* head, int n)
     {
 
@@ -420,8 +434,8 @@ ListNode* removeNthFromEnd(ListNode* head, int n)
         
     }
 	
-	
-20 . Valid Parenthesis :
+```
+## 20 . Valid Parenthesis :
 
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -441,7 +455,7 @@ Output: true
 
 Solution :
 
-
+```c++
 bool isValid(string s)
     {
         stack<char>st;
@@ -472,28 +486,30 @@ bool isValid(string s)
        return st.empty();
     }
 	
+```
 	
-	==========================
-	
-21. Merge Two sorted lsits (ll)
+## 21. Merge Two sorted lsits (ll)
 
 You are given the heads of two sorted linked lists list1 and list2.
 
 Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 
 Return the head of the merged linked list.
-
+```c++
 class Solution {
 public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         ListNode dummy(INT_MIN);
         ListNode *tail = &dummy;
         
-        while (l1 && l2) {
-            if (l1->val < l2->val) {
+        while (l1 && l2)
+        {
+            if (l1->val < l2->val)
+            {
                 tail->next = l1;
                 l1 = l1->next;
-            } else {
+            } else
+            {
                 tail->next = l2;
                 l2 = l2->next;
             }
@@ -505,10 +521,8 @@ public:
     }
 };
 
-
-============================
-
-22. Remove dublicates :
+```
+## 22. Remove dublicates :
 
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
@@ -519,7 +533,7 @@ Return k.
 
 Solution:
 
-
+```c++
 
 int removeDuplicates(vector<int>& nums)
     {
@@ -540,10 +554,9 @@ int removeDuplicates(vector<int>& nums)
         return n-count;
         
     }
+```
 
-===========================
-
-28 . Find the index of the first occurence in the string 
+## 28 . Find the index of the first occurence in the string 
 
 
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
@@ -560,14 +573,19 @@ Can be solve in O(m+n) time with KMP , with brute :
 
 O(m*n)
 
- public int strStr(String haystack, String needle) {
+```c++
+ public int strStr(String haystack, String needle)
+ {
         if(haystack == null || needle == null || needle.length() > haystack.length()) return -1;
 
         int len = haystack.length(), i = 0, j = 0, pos = 0;
-        while(i < len && j < needle.length()) {
-            if(haystack.charAt(i++) == needle.charAt(j)) {
+        while(i < len && j < needle.length())
+        {
+            if(haystack.charAt(i++) == needle.charAt(j))
+            {
                 j++;
-            } else {
+            } else
+            {
                 i = i - j;
                 j = 0;
                 pos = i;
@@ -577,8 +595,56 @@ O(m*n)
     }
 
 
+```
 
-====================
+## 19. Validate Binary Search Tree
+
+Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+A valid BST is defined as follows:
+
+The left
+    subtree
+    of a node contains only nodes with keys less than the node's key.
+    The right subtree of a node contains only nodes with keys greater than the node's key.
+    Both the left and right subtrees must also be binary search trees.
+
+Solution : With the help of helper function we are going to pass two things , the highest value should be at that point and the lowest value at that point.
+
+and then checking things, and nothing much.
+
+
+
+```c++
+class Solution {
+public:
+    
+
+    bool isValidBST(TreeNode* root)
+    {
+        return help(root,LONG_MIN,LONG_MAX);
+    }
+
+    bool help(TreeNode* root,long int min,long int max)
+    {
+        if(root==NULL)
+        {
+            return true;
+        }
+
+        if(root->val >= max or root->val<=min)
+        {
+            return false;
+        }
+        
+        return (help(root->left,min,root->val) && help(root->right,root->val,max));
+
+
+    }
+        
+};
+```
+
 
 	
 	
