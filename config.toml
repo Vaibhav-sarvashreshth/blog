@@ -7,7 +7,7 @@ theme = "m10c"
 [params]
   author = "Christopher Hart"
   description = "A blog about all things technical."
-  avatar = 'avatar.jpg'
+  avatar = "static/avatar.jpg"
 
   [[params.social]]
     icon = "github"
