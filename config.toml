@@ -2,11 +2,12 @@ baseURL = 'https://Vaibhav-sarvashreshth.github.io/blog/'
 languageCode = 'en-us'
 title = "Vaibhav's Blogs"
 theme = "m10c"
-avatar = 'avatar.jpg'
+
 
 [params]
   author = "Christopher Hart"
   description = "A blog about all things technical."
+  avatar = 'avatar.jpg'
 
   [[params.social]]
     icon = "github"
